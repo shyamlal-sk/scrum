@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World Page</title>
+    <title>Welcome</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -29,11 +29,23 @@
             line-height: 1.6;
             margin-bottom: 40px;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
         .buttons {
             display: flex;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
         button {
             padding: 12px 30px;
@@ -53,11 +65,11 @@
             transform: translateY(-2px);
         }
         .secondary {
-            background: #ed8936;
+            background: #4299e1;
             color: white;
         }
         .secondary:hover {
-            background: #dd6b20;
+            background: #3182ce;
             transform: translateY(-2px);
         }
         .danger {
@@ -72,25 +84,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hello World!</h1>
+        <h1>Welcome</h1>
         
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+            </form>
         </div>
         
         <div class="buttons">
-            <button class="primary" onclick="alert('Hello from the primary button! 🌟')">Click Me!</button>
-            <button class="secondary" onclick="document.querySelector('.content').style.backgroundColor = '#e6fffa'">Change Color</button>
-            <button class="danger" onclick="location.reload()">Reset Page</button>
+            <button class="primary" onclick="alert('Signed up successfully! 🎉')">Sign Up</button>
+            <button class="secondary" onclick="alert('Redirecting to login... 🔐')">Log In</button>
+            <button class="danger" onclick="location.reload()">Reset</button>
         </div>
     </div>
 
     <script>
-        console.log('Dummy page loaded successfully! 🎉');
+        console.log('Welcome page loaded successfully!');
     </script>
 </body>
 </html>
